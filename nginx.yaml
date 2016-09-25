@@ -1,0 +1,8 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+   - name: Install nginx
+     apt: pkg=nginx state=installed update_cache=true 
+   - name: Start nginx
+     service: name=nginx state=started
